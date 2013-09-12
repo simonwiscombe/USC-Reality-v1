@@ -1,0 +1,27 @@
+body form#whats-new-form #whats-new-options #whats-new-submit a.submit-button {
+	background-color: #666;
+}
+
+div.box {
+	border: 1px solid #666;
+	padding: 40px;
+	margin: 20px;
+}
+
+/* TOP BAR */
+
+div#reality-logo {
+	display: none;
+}
+
+div.top-bar div.nav-holder {
+	left: -10px;
+}
+
+
+/* FOOTER */
+
+footer .full_width {
+	background: #222;
+	border-top: 18px solid #000;
+}
