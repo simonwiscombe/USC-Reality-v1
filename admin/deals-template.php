@@ -829,7 +829,7 @@ function reality_is_maker_card( $cardNumber ) {
 	
 		$cardTerm = get_term( $card['term_id'], 'cards-tax' );
 	
-		if ( has_term( 'Maker', 'card-type', $cardTerm->slug ) || has_term( 'Maker – Annenberg', 'card-type', $cardTerm->slug ) ) {
+		if ( has_term( array( 'Maker', 'Maker - Annenberg' ), 'card-type', $cardTerm->slug ) ) {
 			return true;
 		} else {
 			return false;
