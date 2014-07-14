@@ -9,7 +9,7 @@ function isNumberKey(evt)
 {
     var charCode = (evt.which) ? evt.which : event.keyCode;
     if (charCode != 46 && charCode > 31 
-        && (charCode < 48 || charCode > 57) && charCode != 65)
+        && (charCode < 48 || charCode > 57))
     return false;
 
 	return true;
@@ -127,7 +127,7 @@ jQuery(document).ready( function($) {
 	
 		var card_id = $(this).val();
 		
-		if ( ( card_id.length == 5 && card_id.search('a') == -1 ) || ( card_id.length == 6 && card_id.search('a') != -1 ) ) {
+		if ( card_id.length == 5 ) {
 		
 			$(this).addClass('loading');
 		

@@ -329,8 +329,12 @@ function reality_get_maker_card( $post_id = false ) {
 		
 		foreach( $cards as $card ) {
 		
-			if ( has_term( 'Maker', 'card-type', $card->slug )) $maker_card = $card;
-		
+			if ( has_term( 'Maker', 'card-type', $card->slug )) {
+				$maker_card = $card;
+			}
+			else if ( has_term( 'Maker - Annenberg', 'card-type', $card->slug )) {
+ 				$maker_card = $card;
+ 			}
 		}
 		
 		return $maker_card;
@@ -434,7 +438,15 @@ function the_deal_cards( $post_id = false, $how = 'cards', $size = 'small' ) {
 				$output .= '</ul>';
 				$output .= '<div class="clear"></div>';
 				break;
-		
+				
+			case 'text':
+				
+				$output = '';
+				foreach( $cards as $card ) {					
+					$output .= '<a href="'.get_permalink( $card->slug ).'">'.get_the_title($card->slug).'</a>,';
+				}
+				break;
+
 		}
 		
 		echo $output;
@@ -824,7 +836,7 @@ function reality_deal_audience_award_process_vote( $comment_id, $params ) {
 add_action( 'bp_activity_comment_posted', 'reality_deal_audience_award_process_vote', 10, 2 );
 
 function reality_is_maker_card( $cardNumber ) {
-
+	
 	if ( $card = term_exists( $cardNumber, 'cards-tax' ) ) {
 	
 		$cardTerm = get_term( $card['term_id'], 'cards-tax' );

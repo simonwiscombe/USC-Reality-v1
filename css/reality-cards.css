@@ -300,7 +300,7 @@
 
 .reality-card .reality-card-container .REALITY_card_front_title_firstline {
 	font-size: 2em;
-	color: #555;
+	color: #bbb;
 	width: 70%;
 	margin: 60% 15% 0 15%;
 	text-align: center;
@@ -563,10 +563,13 @@
 	color: #d63f74;
 }
 
-.reality-card .reality-card-container.special .REALITY_card_front_title_secondline,
 .reality-card .reality-card-container.special .REALITY_card_front_powerup,
 .reality-card .reality-card-container.special .REALITY_card_back_title {
 	color: #06bbe6;
+}
+
+.reality-card .reality-card-container.special .REALITY_card_front_title_secondline {
+	color: #000;
 }
 
 .reality-card .reality-card-container.maker .REALITY_card_front_powerup,

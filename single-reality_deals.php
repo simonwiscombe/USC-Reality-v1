@@ -110,7 +110,7 @@ get_header(); ?>
 			
 			<div class="horizontal-bar">
 				<div class="wrapper">
-					<div class="page-tagline"><?php _e('Reality Awards', 'Reality') ?></div>
+					<div class="page-tagline">Awards<!-- <?php _e('Reality Awards', 'Reality') ?> --></div>
 				</div>
 			</div>
 			<div class="wrapper deal-awards">
